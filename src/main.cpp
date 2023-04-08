@@ -9,7 +9,6 @@
 #include <AsyncElegantOTA.h>
 
 
-
 #define TIMELOOP 15000 // Temps de traitement 3 sec
 #define SEALEVELPRESSURE_HPA (1013.25)
 #define sensorPin  33 //Broche capteur de lumiere
@@ -21,6 +20,10 @@
 
 const float PERIOD_MES = TIMELOOP / 1000;
 const float MILE_TO_KILO = 1.60934;
+
+//Declaration des variables
+
+unsigned long presentMillis = 0 ;
 
 
 
@@ -34,39 +37,21 @@ const char* password = "theking5";
 const char* FILE_NAME = "/data.json"; // Dossier des donnees 
 
 
-//Declaration des variables
 
-int pass = 0 ;
-int windSpeed = 0 ;
-unsigned long millisDelay = TIMELOOP;
-unsigned long lastMillis  = 0 ;
-unsigned long presentMillis = 0 ;
-
-int niveau = 0 ;//Declaration et initialisation valeur mapping
-int niveau2 = 0 ;//Declaration et initialisation valeur mapping
-int sensorValue = 0;//Declaration et initialisation intensite de lumiere
-int sensorValeurPluie = 0;//Declaration et initialisation intensite de pluie
-int reading = 0; // Declaration et initialisation valeur d'entree a notre broche pour le capteur de lumiere
-int readingPluie = 0; // Declaration et initialisation valeur d'entree a notre broche pour le capteur de pluie
 
 AsyncWebServer server(80);
 Adafruit_BME280 bme;
 
-// Compteur 
-void compte() { pass ++ ; }
 
 
 void setup() {
 
   Serial.begin(115200);
- 
-  pinMode(pinWind, INPUT);
-
-  attachInterrupt(digitalPinToInterrupt(pinWind), compte, RISING );
-
+  
+  // Check BME280 sensor
 	if (!bme.begin(0x76)) {
 		Serial.println("Could not find a valid BME280 sensor, check wiring!");
-		//while (1);
+		while (1);
 	}
 
   // Se connecter au WiFi vec (ssid, password) 
@@ -78,11 +63,9 @@ void setup() {
   }
   
   // Print ESP Local IP Address 
-
   Serial.println();
   Serial.println();
   Serial.println(WiFi.localIP());
-  Serial.print(WiFi.localIP()); Serial.println("/index.html");
   Serial.println("Connecté au WiFi.");
 
 
@@ -126,17 +109,10 @@ void loop() {
 // ------- TRAINTEMENT DES DONNEES -------
 // ---------------------------------------
 
-  	presentMillis = millis();
-
-    //Lecture des broches analogiques
-
-    reading = analogRead(sensorPin) ;
-    readingPluie = analogRead(sensorPluie);
- 
-  	sensorValue = ((analogRead(sensorPin)) * 0.0244);  	// Lecture et calcul pourcentage de l'intensite de la lumiere
 
 
   // Obtenir le temps actuel en timestamp
+  presentMillis = millis();
   time_t timestamp = time(NULL);
   
   
