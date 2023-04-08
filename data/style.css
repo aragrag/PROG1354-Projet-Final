@@ -1,0 +1,251 @@
+
+
+
+
+     .card {
+        background-color: #fff;
+        border-radius: 10px;
+        border: none;
+        position: relative;
+        margin-bottom: 30px;
+        box-shadow: 0 0.46875rem 2.1875rem rgba(90, 97, 105, 0.1), 0 0.9375rem 1.40625rem rgba(90, 97, 105, 0.1), 0 0.25rem 0.53125rem rgba(90, 97, 105, 0.12), 0 0.125rem 0.1875rem rgba(90, 97, 105, 0.1);
+    }
+    .l-bg-cherry {
+        background: linear-gradient(to right, #493240, #f09) !important;
+        color: #fff;
+    }
+
+    .l-bg-blue-dark {
+        background: linear-gradient(to right, #373b44, #4286f4) !important;
+        color: #fff;
+    }
+
+    .l-bg-green-dark {
+        background: linear-gradient(to right, #0a504a, #38ef7d) !important;
+        color: #fff;
+    }
+
+    .l-bg-orange-dark {
+        background: linear-gradient(to right, #a86008, #ffba56) !important;
+        color: #fff;
+    }
+
+    .card .card-statistic-3 .card-icon-large .fas,
+    .card .card-statistic-3 .card-icon-large .far,
+    .card .card-statistic-3 .card-icon-large .fab,
+    .card .card-statistic-3 .card-icon-large .fal {
+        font-size: 110px;
+    }
+
+    .card .card-statistic-3 .card-icon {
+        text-align: center;
+        line-height: 50px;
+        margin-left: 15px;
+        color: #000;
+        position: absolute;
+        right: 5px;
+        top: 20px;
+        opacity: 0.1;
+    }
+
+    .l-bg-cyan {
+        background: linear-gradient(135deg, #289cf5, #84c0ec) !important;
+        color: #fff;
+    }
+
+    .l-bg-green {
+        background: linear-gradient(135deg, #23bdb8 0%, #43e794 100%) !important;
+        color: #fff;
+    }
+
+    .l-bg-orange {
+        background: linear-gradient(to right, #f9900e, #ffba56) !important;
+        color: #fff;
+    }
+
+    .l-bg-cyan {
+        background: linear-gradient(135deg, #289cf5, #84c0ec) !important;
+        color: #fff;
+    }
+    .l-bg-move-dark {
+        background: linear-gradient(to right, #673AB7, #9C27B0) !important;
+        color: #fff;
+    }	
+    .l-bg-red-dark {
+        background: linear-gradient(to right, #75000be6, #dc3545) !important;
+        color: #fff;
+    }					
+    body {
+    background-image: -webkit-linear-gradient(hsla(240,75%,75%,.6), hsla(300,75%,75%,.2));
+    font-size: 1em;
+    font-family: sans-serif;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    }
+
+    .btn-group {
+    border-radius: 100px;
+    }
+
+    .btn-group .btn + .btn {
+    margin-left: 0;
+    }
+
+    button {
+    padding: 10px 20px;
+    font-size: 16px;
+    }
+
+    .btn {
+    border-radius: 100px;
+    }
+
+    .btn:focus,
+    .btn:active {
+    outline: none;
+    box-shadow: none;
+    }
+
+    .light-mode {
+    background-color: #eee;
+    color: #111;
+    transition: all 0.5s ease;
+    }
+
+    .light-mode .btn-group {
+    border: 10px solid rgb(255 255 255 / 23%);
+    transition: all 0.5s ease;
+    }
+
+    .light-mode .btn {
+    background: #ccc;
+    color: #444;
+    }
+
+    .light-mode .btn:hover,
+    .light-mode .btn:active {
+    background-color: #bbb;
+    }
+
+    .dark-mode {
+    background-color: #111;
+    color: #eee;
+    transition: all 0.5s ease;
+    }
+
+    .dark-mode .btn-group {
+    border: 10px solid rgba(255, 255, 255, 0.05);
+    transition: all 0.5s ease;
+    }
+
+    .dark-mode .btn {
+    background: #444;
+    color: #fff;
+    }
+
+    .dark-mode .btn:hover,
+    .dark-mode .btn:active {
+    background-color: #333;
+    }
+
+    .btn.active {
+    background-color: rgba(0, 0, 0, 0);
+    }
+    div#ToggleMode {
+    position: fixed;
+    top: 20px;
+    right: 38px;
+    }
+
+    .card .card-statistic-3 .card-icon-large .fas {
+        font-size: 70px;
+    }
+    h2.d-flex.info-cap {
+        font-size: 22px;
+        font-weight: 700;
+        font-family: cursive;
+    }
+    h5.card-title.mb-0 {
+        font-family: cursive;
+        font-size: 20px;
+        font-weight: 700;
+    }	
+    @media (max-width:600px)  { 
+        h2.info-cap {
+            font-size: 45px;
+            font-weight: 700;
+            font-family: cursive;
+        }	
+        h5.card-title.mb-0 {
+            font-family: cursive;
+            font-size: 40px;
+            font-weight: 700;
+        }	
+        body#body {
+            padding-top: 150px;
+        }										
+        div#ToggleMode {
+        position: relative;
+        top: auto;
+        right: 0;
+        margin: 20px;
+        }
+        .card {
+        margin-bottom: 0;
+        } 
+        .row.align-items-center {
+            min-height: auto!important;
+        }				 
+    }	
+    div#History {
+        position: fixed;
+        top: 20px;
+        left: 38px;
+    }	
+    #History a.history {
+        font-size: 20px;
+        padding: 3px 10px;
+        background: #b8b8b8b0;
+        border-radius: 20px;
+        color: #232323;
+    }				     
+
+
+    /* Timer */
+    @font-face{
+        font-family: 'Digital-7';
+        src:  url('fonts/digital-7.ttf') format('woff2'),   b ,g,mdrx
+        url('digital-7.woff') format('woff');
+    }
+    .clockdate-wrapper {
+        background: #d03a96;
+        background: -webkit-linear-gradient(to right, #d03a96, #513798);
+        background: linear-gradient(to right, #d03a96, #513798);
+        padding: 5px 5px 10px 5px;
+        max-width: 289px;
+        width: 100%;
+        text-align: center;
+        border-radius: 5px;
+        margin: 0 auto;
+      
+    }
+    #clock {
+        font-family: cursive;
+        font-size: 40px;
+        text-shadow: 0px 0px 1px #fff;
+        color: #fff;
+    }
+    #clock span {
+        color: rgba(255, 255, 255, 0.8);
+        text-shadow:0px 0px 1px #333;
+        position:relative;
+        top:-5px;
+        left:10px;
+    }
+    #date {
+        letter-spacing:3px;
+        font-size:17px;
+        font-family:arial,sans-serif;
+        color:#fff;
+    }    
+    #clock span { font-size: 25px; }
