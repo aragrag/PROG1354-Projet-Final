@@ -112,7 +112,8 @@ void setup() {
   // Servir les fichiers HTML, CSS et JS depuis le système de fichiers SPIFFS (index.html)
   server.serveStatic("/", SPIFFS, "/").setDefaultFile("index.html");
 
-
+  // Start ElegantOTA To update project 
+  AsyncElegantOTA.begin(&server);    
 
   // Lancer le serveur
   server.begin();
