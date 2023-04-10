@@ -167,6 +167,7 @@
         font-weight: 700;
     }	
     @media (max-width: 768px) { 
+    
         div#snippetContent { min-height: 90vh; }
         h5.card-title.mb-0 { font-size: 25px;}
         .progress { margin-top: 15px!important; }
