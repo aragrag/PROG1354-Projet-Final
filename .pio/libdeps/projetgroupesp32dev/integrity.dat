@@ -1,0 +1,6 @@
+https://github.com/khoih-prog/ESPAsyncWebServer/archive/refs/heads/master.zip
+FS
+SPIFFS
+ayushsharma82/AsyncElegantOTA @ ^2.2.5
+bblanchon/ArduinoJson@^6.21.0
+adafruit/Adafruit BME280 Library@^2.2.2
