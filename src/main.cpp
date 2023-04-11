@@ -8,6 +8,7 @@
 #include <Adafruit_BME280.h>
 #include <AsyncElegantOTA.h>
 
+
 #define TIMELOOP 15000 // Temps de traitement 3 sec
 
 //Declaration des constantes
